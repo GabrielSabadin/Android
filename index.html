@@ -100,18 +100,23 @@ body {
         }
 
         #cases {
-            margin-top: 30px;
-            margin-bottom: 50px;
-            width: 100%;
-            max-width: 1000px; /* Defina uma largura máxima para garantir um layout mais responsivo */
-        }
-
-        @media screen and (max-width: 767px) {
-            #cases {
-                margin-left: 30px; /* Adiciona margem à esquerda de 20px em telas pequenas */
-                
+                margin-top: 30px;
+                margin-bottom: 50px;
+                width: 100%;
+                max-width: 1000px; /* Defina uma largura máxima para garantir um layout mais responsivo */
             }
-        }
+
+            @media screen and (max-width: 767px) {
+                #cases {
+                    margin-left: 30px; /* Adiciona margem à esquerda de 30px em telas pequenas */
+                }
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                #cases {
+                    margin-left: 20px; /* Adiciona margem à esquerda de 20px em telas de tablet */
+                }
+            }
 
         /* sair */
         footer {
@@ -192,8 +197,7 @@ body {
 
             #txt {
                 color: white;
-                margin-left: 350px;
-                font-family: 'Montserrat', sans-serif; 
+                font-family: 'Montserrat', sans-serif;
                 padding-top: 150px;
             }
 
@@ -202,20 +206,27 @@ body {
                 font-size: 20px;
             }
 
+            /* Aplicar a margem apenas para telas de PC */
+            @media only screen and (min-width: 1024px) {
+                #txt {
+                    margin-left: 350px;
+                }
+            }
+
             
             
 
             .orange-button {
-    background-color: #D06918; /* Laranja */
-    color: white; /* Texto branco */
-    border: 2px solid #D06918; /* Borda laranja */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 5px 20px; /* Preenchimento interno */
-    font-size: 16px; /* Tamanho do texto */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-weight: bold;
-    transition: transform 0.3s ease; 
-}
+                background-color: #D06918; /* Laranja */
+                color: white; /* Texto branco */
+                border: 2px solid #D06918; /* Borda laranja */
+                border-radius: 5px; /* Bordas arredondadas */
+                padding: 5px 20px; /* Preenchimento interno */
+                font-size: 16px; /* Tamanho do texto */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+                font-weight: bold;
+                transition: transform 0.3s ease; 
+            }
 
 /* Estilos para quando o botão é hover (passagem do mouse) */
 .orange-button:hover {
